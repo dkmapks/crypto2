@@ -1,0 +1,21 @@
+{
+  "name": "Symulator Portfela Krypto",
+  "short_name": "Portfel Krypto",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f0f4f8",
+  "theme_color": "#1e3a8a",
+  "description": "Prosty symulator portfela kryptowalut z trzema krypto i panelem admina.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
