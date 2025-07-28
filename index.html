@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Symulator Portfela Krypto</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Symulator Portfela Krypto</h1>
+
+  <div id="portfolio">
+    <p><strong>Saldo PLN:</strong> <span id="saldo-pln">0.00</span> zł</p>
+    <p><strong>DCoin:</strong> <span id="saldo-dcoin">0</span> (wartość: <span id="val-dcoin">0.00</span> zł)</p>
+    <p><strong>Branzo:</strong> <span id="saldo-branzo">0</span> (wartość: <span id="val-branzo">0.00</span> zł)</p>
+    <p><strong>BBCoin:</strong> <span id="saldo-bbcoin">0</span> (wartość: <span id="val-bbcoin">0.00</span> zł)</p>
+    <p><strong>Wartość portfela:</strong> <span id="total-value">0.00</span> zł</p>
+  </div>
+
+  <section>
+    <h2>Wpisz kod promocyjny</h2>
+    <input id="promo-code" type="text" placeholder="Kod promocyjny" />
+    <button id="apply-code">Zastosuj</button>
+    <p id="promo-msg"></p>
+  </section>
+
+  <section>
+    <h2>Wyślij kryptowalutę (symulacja)</h2>
+    <select id="send-coin">
+      <option value="dcoin">DCoin</option>
+      <option value="branzo">Branzo</option>
+      <option value="bbcoin">BBCoin</option>
+    </select>
+    <input id="send-amount" type="number" min="0" placeholder="Ilość" />
+    <button id="send-btn">Wyślij</button>
+    <p id="send-msg"></p>
+  </section>
+
+  <section>
+    <h2>Doładuj saldo PLN</h2>
+    <input id="deposit-amount" type="number" min="0" placeholder="Kwota PLN" />
+    <button id="deposit-btn">Doładuj</button>
+    <p id="deposit-msg"></p>
+  </section>
+
+  <button id="admin-toggle">Panel Admina</button>
+
+  <div id="admin-panel" class="hidden">
+    <h2>Panel Admina</h2>
+    <label for="admin-password">Podaj kod admina:</label>
+    <input id="admin-password" type="password" />
+    <button id="admin-login-btn">Zaloguj</button>
+    <p id="admin-login-msg"></p>
+
+    <div id="admin-content" class="hidden">
+      <h3>Ustaw kursy kryptowalut</h3>
+      <label>DCoin (PLN): <input id="kurs-dcoin" type="number" step="0.01" min="0" /></label><br />
+      <label>Branzo (PLN): <input id="kurs-branzo" type="number" step="0.01" min="0" /></label><br />
+      <label>BBCoin (PLN): <input id="kurs-bbcoin" type="number" step="0.01" min="0" /></label><br />
+      <button id="save-rates-btn">Zapisz kursy</button>
+
+      <h3>Saldo portfela</h3>
+      <p>PLN: <span id="admin-saldo-pln"></span> zł</p>
+      <p>DCoin: <span id="admin-saldo-dcoin"></span></p>
+      <p>Branzo: <span id="admin-saldo-branzo"></span></p>
+      <p>BBCoin: <span id="admin-saldo-bbcoin"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
